@@ -1,0 +1,41 @@
+<div class="dialog-login">
+  <div class="dialog-head">
+    <button class="close-icon" (click)="closeDialog()">
+      <img src="assets/icons/close.svg" alt="">
+    </button>
+  </div>
+
+  <div class="content">
+    <div class="dialog-title">
+      <h2>Вход</h2>
+    </div>
+    <div class="dialog-content">
+      <form [formGroup]="loginForm">
+        <input
+          type="text"
+          class="phone"
+          (ngModelChange)="checkPhone($event)"
+          placeholder="Телефон"
+          [class.ng-invalid]="isValid"
+          formControlName="phone"
+          maxlength="11"
+        >
+        <div class="validator" *ngIf="isValid">
+          <img src="/assets/icons/error.svg" alt=""> <span class="text">Введите номер в формате +7(ххх)-ххх-хх-хх</span>
+        </div>
+        <div class="hide-pass">
+          <input
+            [type]="fieldTextType ? 'text' : 'password'"
+            [class.mt]="isValid"
+            class="password"
+            placeholder="Пароль"
+            formControlName="password"
+          >
+          <img [src]="fieldTextType ? 'assets/icons/remove_red_eye.svg' : 'assets/icons/close-eye.svg'" (click)="toggleFieldTextType()">
+        </div>
+        <a class="forgot-pass">Напомнить пароль</a>
+        <button class="login-btn" (click)="login()">Войти</button>
+      </form>
+    </div>
+  </div>
+</div>

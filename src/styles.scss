@@ -1,0 +1,114 @@
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+@import "~swiper/swiper-bundle.css";
+/* You can add global styles to this file, and also import other style files */
+body{
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Gilroy"), url("/assets/font/Gilroy-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 500;
+  src: local("Gilroy"), url("/assets/font/Gilroy-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 600;
+  src: local("Gilroy"), url("/assets/font/Gilroy-Semibold.woff2") format("woff2");
+}
+@font-face {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 700;
+  src: local("Gilroy"), url("/assets/font/Gilroy-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 800;
+  src: local("Gilroy"), url("/assets/font/Gilroy-Extrabold.woff2") format("woff2");
+}
+
+body {
+  font-family: Gilroy,sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #1d2530;
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
+  background: #fff;
+  -webkit-font-feature-settings: "salt" on,"liga" off;
+  font-feature-settings: "salt" on,"liga" off;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 100%;
+  overflow: auto;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 300px;
+  margin: 50px auto;
+}
+.large-window{
+  max-width: 95vw!important;
+
+  mat-dialog-container{
+    height: 87%;
+  }
+}
+
+.large-window-register{
+  max-width: 95vw!important;
+
+  mat-dialog-container{
+    height: 90%;
+  }
+}
+
+@media only screen and (min-width:992px) and (max-width:1800px) {
+  .swiperTariff{
+    .swiper-pagination{
+      display: none!important;
+    }
+  }
+}
+@media only screen and (min-width:767px) and (max-width:1800px) {
+  .swiperSteps{
+    .swiper-pagination{
+      display: none!important;
+    }
+  }
+}
+//.swiperTariff, .swiperSteps{
+//  .swiper-pagination{
+//    display: none!important;
+//  }
+//}
+
+.swiper-pagination-bullet{
+  border: 2px solid #685ed6;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+}
+.swiper-pagination-bullet-active{
+  border: none;
+  background-color: #685ED6;
+}

@@ -1,0 +1,202 @@
+<app-header></app-header>
+
+<section class="banner-offer">
+  <div class="container-md banner-wrapper">
+    <div class="row">
+      <div class="col-lg-6 col-md-5 col-12">
+        <h1 class="offer-title">
+          <span>Telegram чат</span>
+          на вашем сайте
+        </h1>
+        <p class="offer-description">Общение с клиентами станет простым и удобным, а подключение займет 5 минут. Первый месяц — <b>бесплатно!</b></p>
+        <a href="" class="button-offer">Подключить</a>
+      </div>
+      <div class="col-lg-6 col-md-7 col-12">
+        <div class="offer-image">
+          <img src="assets/images/ilustration.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-block">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-lg-6 col-md-7 col-12">
+        <h2 class="about-title">Tocha Online — это</h2>
+        <ul class="about-list">
+          <li>
+            <div class="list-img">
+              <img src="assets/images/i1.svg" alt="">
+            </div>
+            <div class="list-text">
+              <h3>Ничего лишнего</h3>
+              <span>Отсутствие лишних приложений для операторов. Оператору не нужно учиться работать с чатом</span>
+            </div>
+          </li>
+          <li>
+            <div class="list-img">
+              <img src="assets/images/i2.svg" alt="">
+            </div>
+            <div class="list-text">
+              <h3>Простота</h3>
+              <span>Простая установка на сайт</span>
+            </div>
+          </li>
+          <li>
+            <div class="list-img">
+              <img src="assets/images/i3.svg" alt="">
+            </div>
+            <div class="list-text">
+              <h3>Несколько ассистентов</h3>
+              <span>Возможность подключения нескольких ассистентов</span>
+            </div>
+          </li>
+          <li>
+            <div class="list-img">
+              <img src="assets/images/i4.svg" alt="">
+            </div>
+            <div class="list-text">
+              <h3>Кастомизация</h3>
+              <span>Настройка интерфейса под нужды сайта</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-6 col-md-5 col-12 about-center">
+        <img class="about-image img-responsive" src="assets/images/phone-c.png" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tariff-plan">
+  <div class="container">
+    <h2 class="tariff-title">Тарифы</h2>
+    <p class="sub-title">Стоимость зависит от трафика сайта</p>
+    <div class="tariff-slider">
+      <swiper #swiperRef [config]="configTariff" class="swiperTariff">
+        <ng-template swiperSlide let-data *ngFor="let slide of slides; let i = index">
+          <div class="tariff-item">
+            <header class="tariff-item__header">{{slide.name}}</header>
+            <div class="tariff-item__content">
+              <h3 class="tariff-item__title text_{{i+1}}">{{slide.text}}</h3>
+              <div class="tariff-item__price">{{slide.pricePer}}</div>
+              <a href="#" class="tariff-item__btn">{{slide.connect}}</a>
+            </div>
+          </div>
+        </ng-template>
+        <div slot="container-end" class="swiper-pagination pagination-test"></div>
+      </swiper>
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="container">
+    <h2 class="steps-title">Всего 3 шага для подключения Telegram чата</h2>
+    <swiper #swiperRefStep class="swiper-2 swiperSteps" [config]="configSteps">
+      <ng-template swiperSlide let-data *ngFor="let step of steps; let i = index">
+        <div class="steps-item steps-item_{{i+1}}">
+          <div class="steps-item__number">{{step.number}}</div>
+          <h3 class="steps-item__title">{{step.name}}</h3>
+          <p class="steps-item__desc">{{step.text}}</p>
+          <div class="steps-item__img">
+            <img [src]="step.img" alt="">
+          </div>
+        </div>
+      </ng-template>
+      <div slot="container-end" class="swiper-pagination pagination-test"></div>
+    </swiper>
+  </div>
+</section>
+
+<section class="client-comments">
+  <div class="container-md">
+    <h2 class="title-comment">Отзывы клиентов</h2>
+    <swiper [config]="configClient">
+      <ng-template swiperSlide let-data *ngFor="let review of reviews">
+        <div class="swiper-slide reviews__item reviews-item">
+          <div class="reviews-item__content">
+            <div class="reviews-item__title">{{review.title}}</div>
+            <span>{{review.text}}</span>
+          </div>
+          <footer class="reviews-item__footer">
+            <div class="reviews-item__ava">
+              <img [src]="review.image" alt="">
+            </div>
+            <div class="reviews-item__name">
+              <b>{{review.name}}</b>
+              <span>{{review.site}}</span>
+            </div>
+          </footer>
+        </div>
+      </ng-template>
+      <div slot="container-end" class="swiper-pagination pagination-test"></div>
+    </swiper>
+  </div>
+</section>
+
+<section class="subscriber">
+  <div class="container-md">
+    <div class="subscriber-wrapper">
+      <div class="row">
+        <div class="col-md-5 col-12 sub">
+          <div class="image">
+            <img src="assets/images/ilustration2.svg" alt="">
+          </div>
+        </div>
+        <div class="col-md-7 col-12 box">
+          <h2 class="subscribe-title">Подключите Telegram чат уже сегодня</h2>
+          <form action="#" class="box__form">
+            <input type="email" class="email" required="" placeholder="Введите e-mail">
+            <button type="submit" class="btn-black btn-black_noradius">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="footer">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-lg-5 col-md-4 col-4">
+        <div class="footer__logo"><img src="assets/images/logo.png" alt=""> tocha</div>
+      </div>
+      <div class="col-lg-7 col-md-8 col-8 right">
+        <div class="footer__item">
+          <div class="footer__title">Telegram чат</div>
+          <ul class="footer__list">
+            <li><a href="#" class="footel__link">О нас</a></li>
+            <li><a href="#" class="footel__link">Партнеры</a></li>
+            <li><a href="#" class="footel__link">Инструкция</a></li>
+            <li><a href="#" class="footel__link">Цены</a></li>
+            <li><a href="#" class="footel__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__item">
+          <div class="footer__title">Поддержка</div>
+          <ul class="footer__list">
+            <li><a href="#" class="footel__link">Центр поддержки</a></li>
+            <li><a href="#" class="footel__link">Политика конфеденциальности</a></li>
+            <li><a href="#" class="footel__link">Документы оферта</a></li>
+            <li><a href="#" class="footel__link">Статус</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sub-footer">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-sm-auto col-12">
+          © 2021 Tocha. Все права защищены
+        </div>
+        <div class="col-sm-auto col-12">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

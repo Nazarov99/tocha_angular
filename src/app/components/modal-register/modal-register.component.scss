@@ -1,0 +1,241 @@
+.dialog-login{
+
+
+  .dialog-head{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+
+    .close-icon{
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+      padding: 0;
+
+      img{
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+
+  .content{
+    margin-top: 30px;
+
+    .dialog-title{
+      text-align: center;
+      margin-bottom: 30px;
+
+      h2{
+        font-family: 'Gilroy', sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 32px;
+        color: #685ED6;
+      }
+    }
+    .dialog-content{
+      text-align: center;
+      padding: 0 45px;
+
+      input.ng-dirty.ng-invalid {
+        background: #FFFAFA;
+        border: 1px solid #F93232;
+      }
+
+      .validator{
+        text-align: initial;
+        margin-bottom: 8px;
+
+        span{
+          font-family: 'Gilroy', sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 16px;
+          color: #AAAAAA;
+          margin-left: 5px;
+        }
+      }
+
+      .phone{
+        width: 100%;
+        height: 40px;
+        outline: none;
+        background: #F7F7FD;
+        border-radius: 4px;
+        padding-left: 20px;
+        margin-bottom: 10px;
+        border: 1px solid transparent;
+
+        &::placeholder{
+          font-family: 'Gilroy', sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 24px;
+          color: #1D2530;
+        }
+
+        &:hover{
+          border: 1px solid #ebebf5;
+        }
+        &:focus{
+          border: 1px solid #605DEC;
+        }
+      }
+      .email{
+        width: 100%;
+        height: 40px;
+        outline: none;
+        background: #F7F7FD;
+        border-radius: 4px;
+        padding-left: 20px;
+        margin-bottom: 10px;
+        border: 1px solid transparent;
+
+        &::placeholder{
+          font-family: 'Gilroy', sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 24px;
+          color: #1D2530;
+        }
+
+        &:hover{
+          border: 1px solid #ebebf5;
+        }
+        &:focus{
+          border: 1px solid #605DEC;
+        }
+      }
+      .rep{
+
+        img{
+          top: 15px!important;
+        }
+      }
+      .hide-pass{
+        position: relative;
+
+
+
+        input.ng-dirty.ng-invalid {
+          border:1px solid red
+        }
+
+        img{
+          position: absolute;
+          right: 15px;
+          top: 10px;
+          cursor: pointer;
+        }
+        .password{
+          width: 100%;
+          height: 40px;
+          outline: none;
+          background: #F7F7FD;
+          border-radius: 4px;
+          padding-left: 20px;
+          border: 1px solid transparent;
+
+          &::placeholder{
+            font-family: 'Gilroy', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            color: #1D2530;
+          }
+
+          &:hover{
+            border: 1px solid #ebebf5;
+          }
+          &:focus{
+            border: 1px solid #605DEC;
+          }
+        }
+        .confirmPassword{
+          width: 100%;
+          height: 40px;
+          outline: none;
+          background: #F7F7FD;
+          border-radius: 4px;
+          padding-left: 20px;
+          margin-top: 8px;
+          border: 1px solid transparent;
+
+          &::placeholder{
+            font-family: 'Gilroy', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            color: #1D2530;
+          }
+
+          &:hover{
+            border: 1px solid #ebebf5;
+          }
+          &:focus{
+            border: 1px solid #605DEC;
+          }
+        }
+      }
+      .mt{
+        margin-top: 14px!important;
+      }
+      .register-btn{
+        width: 100%;
+        height: 48px;
+        background: #685ED6;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
+        border-radius: 6px;
+        border: none;
+        font-family: 'Gilroy', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+        font-feature-settings: 'salt' on, 'liga' off;
+        color: #FFFFFF;
+        margin-top: 44px;
+        cursor: pointer;
+
+        &:hover{
+          background: #33AFE1;
+          box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.14);
+        }
+        &:active{
+          background: #18E1F7;
+          box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.14);
+        }
+      }
+    }
+  }
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media (max-width: 375px) {
+  .dialog-content{
+    padding: 0!important;
+  }
+}
+
+@media only screen and (max-width:414px) {
+  .dialog-login{
+    .content{
+
+      .dialog-content{
+        padding: 0;
+      }
+    }
+  }
+}
